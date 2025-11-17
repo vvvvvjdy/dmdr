@@ -3,20 +3,15 @@ import matplotlib.pyplot as plt
 from peft import PeftModel
 from diffusers import StableDiffusion3Pipeline
 base_path = "DyJiang/dmdr"
-
 # dmdr with srpo
 subfolder = "sd35l-dmdr-4step-srpo-dfnclip-hpsv21-lora"
-
 # dmdr with refl
 # subfolder = "sd35l-dmdr-4step-refl-dfnclip-hpsv21-lora"
-
 device = "cuda" if torch.cuda.is_available() else "cpu"
 pipe = StableDiffusion3Pipeline.from_pretrained(
     "stabilityai/stable-diffusion-3.5-large",
-    torch_dtype=torch.float16,
-    local_files_only=True,
+    torch_dtype=torch.float16
 ).to(device)
-
 pipe.transformer = PeftModel.from_pretrained(pipe.transformer,
                                              base_path,
                                              subfolder = subfolder
