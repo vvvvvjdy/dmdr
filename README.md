@@ -154,7 +154,7 @@ We only use these weights and data for research purpose.
 If you find DMDR useful, please kindly cite our paper:
 ```bibtex
 @article{jiang2025dmdr,
-title={Distribution Matching Distillation Meets  Reinforcement Learning},
+title={Distribution Matching Distillation Meets Reinforcement Learning},
 author={Jiang, Dengyang and Liu, Dongyang and Wang, Zanyi and Wu, Qilong and Jin, Xin and Liu, David and Li, Zhen and Wang, Mengmeng and Gao, Peng and Yang, Harry},
 journal={arXiv preprint arXiv:2505.02831},
 year={2025}
