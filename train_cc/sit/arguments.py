@@ -1,0 +1,81 @@
+import argparse
+
+def parse_args():
+
+    parser = argparse.ArgumentParser(description="Training")
+
+    # deepspeed
+    parser.add_argument("--deepspeed-config", type=str, default=None, help="Path to deepspeed config file.")
+
+    # logging:
+    parser.add_argument("--output-dir", type=str, default="exps")
+    parser.add_argument("--logging-dir", type=str, default="logs")
+
+    parser.add_argument("--exp-name", type=str, required=True)
+    parser.add_argument("--sample-steps", type=int, default=2000)
+    parser.add_argument("--checkpoint-steps", type=int, default=20000)
+    parser.add_argument("--max-train-steps", type=int, default=200000)
+
+    # Gen model
+    parser.add_argument("--model", type=str)
+    parser.add_argument("--num-classes", type=int, default=1000)
+    parser.add_argument("--cfg-prob", type=float, default=0.1, help="use class-free guidance if > 0")
+    parser.add_argument("--fused-attn", action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument("--qk-norm", action=argparse.BooleanOptionalAction, default=False)
+    parser.add_argument("--pretrain-path", type=str, default=None, help="Path to the pretrained model checkpoint.")
+    parser.add_argument("--num-steps", type=int, default=1, help="Number of infer step for few-step generator.")
+    parser.add_argument("--shift", type=float, default=1.0, help="Shift for the few-step generator.")
+    parser.add_argument("--resume-ckpt", type=str, default=None)
+
+    # Guidance model
+    parser.add_argument("--lora-rank", type=int, default=32, help="Rank for LoRA units.")
+    parser.add_argument("--lora-scale-f", type=float, default=1.0, help="Guidance scale for the fake estimator.")
+    parser.add_argument("--lora-scale-r", type=float, default=0.25, help="Guidance scale for the real estimator.")
+
+    # dataset
+    parser.add_argument("--resolution", type=int, default=512, help="Image resolution for training.")
+
+    # precision
+    parser.add_argument("--mixed-precision", type=str, default="fp16", choices=["no", "fp16", "bf16"])
+    parser.add_argument("--use-8bit-adam", action=argparse.BooleanOptionalAction, default=False,)
+
+    # optimization
+    parser.add_argument("--batch-size", type=int, default=128, help="local batch size.")
+    parser.add_argument("--gradient-accumulation-steps", type=int, default=1)
+    parser.add_argument("--learning-rate-gen", type=float, default=1e-6)
+    parser.add_argument("--learning-rate-gui", type=float, default=1e-6)
+    parser.add_argument("--adam-beta1", type=float, default=0.9, help="The beta1 parameter for the Adam optimizer.")
+    parser.add_argument("--adam-beta2", type=float, default=0.999, help="The beta2 parameter for the Adam optimizer.")
+    parser.add_argument("--adam-weight-decay", type=float, default=0.01, help="Weight decay to use.")
+    parser.add_argument("--adam-epsilon", type=float, default=1e-08, help="Epsilon value for the Adam optimizer")
+    parser.add_argument("--max-grad-norm", default=1.0, type=float, help="Max gradient norm.")
+
+    # seed
+    parser.add_argument("--seed", type=int, default=30)
+
+    # cpu
+    parser.add_argument("--num-workers", type=int, default=16)
+
+    # loss
+    parser.add_argument("--cold-start-iter", type=int, default=0, help="Number of iterations to cold start the DMD loss.")
+    parser.add_argument("--gen-a", type=float, default=1.0, help="Mean for log-normal distribution for Train.")
+    parser.add_argument("--gen-b", type=float, default=1.0,
+                        help="Standard deviation for log-normal distribution for Train.")
+    parser.add_argument("--s-type-gen", type=str, default="normal", choices=["logit_normal", "uniform"],)
+    parser.add_argument("--gui-a", type=float, default=1.0, help="Mean for log-normal distribution for DMD loss.")
+    parser.add_argument("--gui-b", type=float, default=1.0,
+                        help="Standard deviation for log-normal distribution for DMD loss.")
+    parser.add_argument("--s-type-gui", type=str, default="normal", choices=["logit_normal", "uniform"],)
+    parser.add_argument("--dynamic-step", type=int, default=0)
+    parser.add_argument("--ratio-update", type=float, default=5.0,
+                        help="Ratio of generator update to discriminator update.")
+    parser.add_argument("--cfg-r", type=float, default=1.0, help="Classifier-free guidance scale for real estimator. (middle), set to 1.0 to disable.")
+
+
+    # reward ReFL
+    parser.add_argument("--encoder-type", type=str, default=None)
+    parser.add_argument("--dino-loss-weight", type=float, default=0.5)
+
+    args = parser.parse_args()
+
+    return args
