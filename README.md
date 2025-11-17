@@ -132,7 +132,7 @@ image.save("sdxl_1step_output.png")
 
 
 
-## 👊 Other Work of Our Team
+## 🥂 Other Work of Our Team
 
 - **[Decoupled DMD](https://)**: Rethinking how DMD works and  revealing a functional decoupling
 strategy with CFG Augmentation (CA) as the primary engine for few-step conversion and Distribution
