@@ -5,7 +5,21 @@
   <a href='https://huggingface.co/DyJiang/dmdr'><img src='https://img.shields.io/badge/HuggingFace-blue?logo=huggingface'></a> &nbsp;
 </div>
 
+---
+
 ![our samples](assets/demo_pic_z.png)
+
+
+<p align="center">
+   <figcaption style="text-align: center; margin-top: 10px; font-size: 0.95em;">
+            DMDR contains three key elements: (1). A DMD branch to optimize the generator using the gradient of an implicit distribution matching objective;  
+            (2). A RL branch to synchronously introduce the reward feedback from the reward model;  
+            (3). Two dynamic training strategies to achieve faster and better distillation in the initial phase.
+        </figcaption>
+  <img src="assets/dmdr_method.png" alt="method" style="width:100%;">
+</p>
+
+---
 
 ## 💥 News
 
