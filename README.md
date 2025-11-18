@@ -1,8 +1,9 @@
 <h1 align="center"> DMDR:<br>Distribution Matching Distillation Meets  Reinforcement Learning</h1>
 <div align="center">
-  <a href='https://arxiv.org/abs/2511.13649'><img src='https://img.shields.io/badge/ArXiv-red?logo=arxiv'></a>  &nbsp;
-  <a href="https://github.com/vvvvvjdy/dmdr"><img src="https://img.shields.io/badge/GitHub-9E95B7?logo=github"></a> &nbsp; 
-  <a href='https://huggingface.co/DyJiang/dmdr'><img src='https://img.shields.io/badge/HuggingFace-blue?logo=huggingface'></a> &nbsp;
+  <a href=' '>< img src='https://img.shields.io/badge/ArXiv-red?logo=arxiv'></a >  &nbsp;
+  <a href="https://github.com/vvvvvjdy/dmdr">< img src="https://img.shields.io/badge/GitHub(DMDR)-9E95B7?logo=github"></a > &nbsp; 
+  <a href="https://github.com/Z-Image/Z-Image">< img src="https://img.shields.io/badge/GitHub(Z-Image)-9E95B7?logo=github"></a > &nbsp; 
+  <a href='https://huggingface.co/DyJiang/dmdr'>< img src='https://img.shields.io/badge/HuggingFace-blue?logo=huggingface'></a > &nbsp;
 </div>
 
 ---
@@ -16,13 +17,15 @@
             (2). A RL branch to synchronously introduce the reward feedback from the reward model;  
             (3). Two dynamic training strategies to achieve faster and better distillation in the initial phase.
         </figcaption>
-  <img src="assets/dmdr_method.png" alt="method" style="width:100%;">
-</p>
+  < img src="assets/dmdr_method.png" alt="method" style="width:100%;">
+</p >
 
 ---
 
 
 ## 🔥 Update Plan and History
+
+- **[xxxx]** We will add support for Decoupled DMD + DMDR.
 
 - **[xxxx]** We will release FSDP training scripts for DMDR.
 
