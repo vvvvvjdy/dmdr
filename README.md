@@ -1,6 +1,6 @@
 <h1 align="center"> DMDR:<br>Distribution Matching Distillation Meets  Reinforcement Learning</h1>
 <div align="center">
-  <a href='https://arxiv.org/abs/'><img src='https://img.shields.io/badge/ArXiv-red?logo=arxiv'></a>  &nbsp;
+  <a href='https://arxiv.org/abs/2511.13649'><img src='https://img.shields.io/badge/ArXiv-red?logo=arxiv'></a>  &nbsp;
   <a href="https://github.com/vvvvvjdy/dmdr"><img src="https://img.shields.io/badge/GitHub-9E95B7?logo=github"></a> &nbsp; 
   <a href='https://huggingface.co/DyJiang/dmdr'><img src='https://img.shields.io/badge/HuggingFace-blue?logo=huggingface'></a> &nbsp;
 </div>
@@ -156,7 +156,7 @@ If you find DMDR useful, please kindly cite our paper:
 @article{jiang2025dmdr,
 title={Distribution Matching Distillation Meets Reinforcement Learning},
 author={Jiang, Dengyang and Liu, Dongyang and Wang, Zanyi and Wu, Qilong and Jin, Xin and Liu, David and Li, Zhen and Wang, Mengmeng and Gao, Peng and Yang, Harry},
-journal={arXiv preprint arXiv:2505.02831},
+journal={arXiv preprint arXiv:2511.13649},
 year={2025}
 }
 ```
