@@ -1,10 +1,11 @@
 <h1 align="center"> DMDR:<br>Distribution Matching Distillation Meets  Reinforcement Learning</h1>
 <div align="center">
-  <a href=' '>< img src='https://img.shields.io/badge/ArXiv-red?logo=arxiv'></a >  &nbsp;
-  <a href="https://github.com/vvvvvjdy/dmdr">< img src="https://img.shields.io/badge/GitHub(DMDR)-9E95B7?logo=github"></a > &nbsp; 
-  <a href="https://github.com/Z-Image/Z-Image">< img src="https://img.shields.io/badge/GitHub(Z-Image)-9E95B7?logo=github"></a > &nbsp; 
-  <a href='https://huggingface.co/DyJiang/dmdr'>< img src='https://img.shields.io/badge/HuggingFace-blue?logo=huggingface'></a > &nbsp;
+  <a href='https://arxiv.org/abs/2511.13649'><img src='https://img.shields.io/badge/ArXiv-red?logo=arxiv'></a>  &nbsp;
+  <a href="https://github.com/vvvvvjdy/dmdr"><img src="https://img.shields.io/badge/GitHub(DMDR)-9E95B7?logo=github"></a> &nbsp;
+  <a href="https://github.com/Z-Image/Z-Image"><img src="https://img.shields.io/badge/GitHub(ZImage)-9E95B7?logo=github"></a> &nbsp; 
+ <a href='https://huggingface.co/DyJiang/dmdr'><img src='https://img.shields.io/badge/HuggingFace-blue?logo=huggingface'></a> &nbsp;
 </div>
+
 
 ---
 
