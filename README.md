@@ -21,11 +21,6 @@
 
 ---
 
-## 💥 News
-
-Our internal few-step model is on the verge of its unveiling and opensource. 
-With ultra-realistic creation, native bilingual capabilities, exceptional text rendering, and so on. 
-Stay tune for the model's release!
 
 ## 🔥 Update Plan and History
 
