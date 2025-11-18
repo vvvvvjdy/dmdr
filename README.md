@@ -119,7 +119,7 @@ image.save("sdxl_1step_output.png")
 
 ## 🌠 Training 
 ### Note
-- We use GPUs with 144GB memory each to train our few-step diffusion models, we do not encounter any OOM issues. If you use GPUs with smaller memory, you may need to (1) reducing the batch size, (2) training in different stage which we already support (3) using other more memory-saving distributed training methods such as FSDP, which we plan to support in the future.
+- We use GPUs with 144GB memory each to train our few-step diffusion models, we do not encounter any OOM issues. If you use GPUs with smaller memory, you may need to (1) reduce the batch size, (2) train in different stage which we already support (3) use other more memory-saving distributed training methods such as FSDP, which we plan to support in the future. （4） add checkpointing for the reward model.
 - As our machine is offline, we do not support logging tools such as Wandb currently. But you can easily add them in the training script.
 - In our experiments, we find that stronger multi-step models and more appropriate reward models often bring better results in DMDR. Feel free to apply DMDR to your own multi-step models and reward models.
 
