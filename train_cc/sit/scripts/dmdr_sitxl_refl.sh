@@ -25,7 +25,7 @@ accelerate launch \
     --resolution 256 \
     --seed   30 \
     --mixed-precision "fp16" \
-    --batch-size 32 \
+    --batch-size 24 \
     --gradient-accumulation-steps 1 \
     --learning-rate-gen 1e-5 \
     --learning-rate-gui 1e-5 \
