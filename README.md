@@ -30,10 +30,41 @@
 
 ---
 
-## 🔥 Note
 
-**Our training and inference code is currently undergoing internal check of the company. Once it passes, we will fully open source it.**
 
+
+## 🌟 Inference
+
+**8 step Z-Image-Turbo generation (distilled by Decoupled-DMD and DMDR)**
+
+See [Z-Image](https://github.com/Tongyi-MAI/Z-Image) repo.
+  
+
+
+
+
+## 🌠 Training 
+
+We now only have access to open the training demo code of ImageNet, hoping it can help the community to understand DMDR!
+
+Refer to [SiT (class-conditional generation on ImageNet)](train_cc/sit/README.md) for training few-step SiT diffusion model.
+
+
+
+## 🥂 Other Research of Our Team
+
+- **[Decoupled DMD](https://arxiv.org/abs/2511.22677)**: Rethinking how DMD works and  revealing a functional decoupling
+strategy with CFG Augmentation (CA) as the primary engine for few-step conversion and Distribution
+Matching (DM) as the regularizer. 
+
+
+## 🤝🏻 Acknowledgement
+
+This code is mainly built upon [DMD2](https://github.com/tianweiy/DMD2), [SRA](https://github.com/vvvvvjdy/SRA),  [ReFL](https://github.com/zai-org/ImageReward), repositories. 
+Thanks for  their contributions to the community.
+
+We also sincerely thank the opensource weights from  [REPA](https://github.com/sihyun-yu/REPA), [DINOv2](https://github.com/facebookresearch/dinov2) and so on. 
+We only use these weights and data for research purpose.
 
 
 ## 🌺 Citation
